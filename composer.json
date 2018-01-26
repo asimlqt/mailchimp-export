@@ -1,0 +1,25 @@
+{
+    "name": "asimlqt/mailape",
+    "type": "library",
+    "description": "A PHP library to sync Mailchimp lists in batch",
+    "keywords": ["php", "mailchimp", "batch"],
+    "homepage": "https://github.com/asimlqt/mailape",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Asim Liaquat",
+            "email": "asimlqt22@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asimlqt\\MailchimpExport\\": "src"
+        }
+    }
+}
+
