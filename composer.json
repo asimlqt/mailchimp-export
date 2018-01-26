@@ -1,9 +1,9 @@
 {
-    "name": "asimlqt/mailape",
+    "name": "asimlqt/mailchimp-export",
     "type": "library",
-    "description": "A PHP library to sync Mailchimp lists in batch",
+    "description": "A library to export Mailchimp lists",
     "keywords": ["php", "mailchimp", "batch"],
-    "homepage": "https://github.com/asimlqt/mailape",
+    "homepage": "https://github.com/asimlqt/mailchimp-export",
     "license": "Apache-2.0",
     "authors": [
         {
