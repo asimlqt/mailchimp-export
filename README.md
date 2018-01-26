@@ -42,7 +42,7 @@ See example above.
 
 ### Database Writer
 
-**CAUTION: The table specified will be truncated before being written to!**
+_**CAUTION: The table specified will be truncated before being written to!**_
 
 This requires a little more configuration than the csv writer.
 
