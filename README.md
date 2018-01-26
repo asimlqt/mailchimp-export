@@ -22,10 +22,10 @@ use Asimlqt\MailchimpExport\Writer\CsvWriter;
 $writer = new CsvWriter(new SplFileObject("/my/path/list.csv", "w"));
 
 try {
-	$exp = new ListExport($apiKey, $listId, $writer);
-	$exp->run();
+    $exp = new ListExport($apiKey, $listId, $writer);
+    $exp->run();
 } catch (MailchimpException $e) {
-	echo $e->getMessage();    
+    echo $e->getMessage();    
 }
 ```
 
@@ -44,7 +44,7 @@ This requires a little more configuration than the csv writer.
 
 The constructor has the following definition:
 
-```
+```php
 public function __construct(PDO $pdo, string $table, array $mapping)
 ```
 
@@ -75,22 +75,22 @@ $pdo = new PDO('mysql:dbname=mailchimp;host=127.0.0.1', 'user', 'password');
 $writer = new DatabaseWriter($pdo, 'subscribers', $mapping);
 
 try {
-	$exp = new ListExport($apiKey, $listId, $writer);
-	$exp->run();
+    $exp = new ListExport($apiKey, $listId, $writer);
+    $exp->run();
 } catch (MailchimpException $e) {
-	echo $e->getMessage();    
+    echo $e->getMessage();
 }
 ```
 
 In the above example 'Email Address', 'First Name' and 'Last Name' are names of mailchimp fields and 'email', 'firstname' and 'lastname' are database columns they will be written to. The `CsvWriter` just writes everything to a csv file as is hence it doesn't require a mapping.
 
-The data is inserted into the database in batches. The default size is 100 rows. You can set that toa differenet value if you with using `setBatchSize()` method of `DatabaseWriter` 
+The data is inserted into the database in batches. The default size is 100 rows. You can set that to a different value if you wish using `setBatchSize()` method of `DatabaseWriter` 
 
 ### Custom Writer
 
 If you need to write the data elsewhere then simply extend the `Writer` interface which only has one method and pass it to the `ListExport` constructor.
 
-```
+```php
 interface Writer
 {
     public function write(array $data);
