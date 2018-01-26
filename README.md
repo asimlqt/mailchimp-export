@@ -1,6 +1,8 @@
 # mailchimp-export
 A simple library to export Mailchimp lists
 
+Requires PHP >= 7
+
 ## Installation
 Use the following composer command to install
 ```
@@ -39,6 +41,8 @@ See example above.
 
 
 ### Database Writer
+
+**CAUTION: The table specified will be truncated before being written to!**
 
 This requires a little more configuration than the csv writer.
 
